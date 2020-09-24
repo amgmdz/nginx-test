@@ -42,7 +42,8 @@ location /.user.ini {
 
 # PHP entry point for setup application
 location ~* ^/setup($|/) {
-    root $MAGE_ROOT;
+    root $MAGE_ROOT;    root $MAGE_ROOT;
+
     location ~ ^/setup/index.php {
         fastcgi_pass   fastcgi_backend;
 
