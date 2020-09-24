@@ -118,9 +118,6 @@ location /static/ {
             rewrite ^/static/(version\d*/)?(.*)$ /static.php?resource=$2 last;
         }
     }
-    location ~* \.css {
-    add_header  Content-Type    text/css;
-    }
     location ~* \.(zip|gz|gzip|bz2|csv|xml)$ {
         add_header Cache-Control "no-store";
         add_header X-Frame-Options "SAMEORIGIN";
